@@ -1,0 +1,11 @@
+# .gitpod.yml
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: cmake -S . -B build
+    command: cmake --build build
+
+ports:
+  - port: 8000
+    onOpen: ignore
